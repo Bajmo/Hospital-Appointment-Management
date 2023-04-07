@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-md-8">
+      <div class="text-center my-4">
+        <h1 class="display-4 border-bottom pb-3">Bajmo Hospital</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Patients</h5>
+          <p class="card-text">View and manage patient records</p>
+          <a href="{{ patients_url }}" class="btn btn-primary">Go to patients</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Doctors</h5>
+          <p class="card-text">View and manage doctor records</p>
+          <a href="{{ doctors_url }}" class="btn btn-primary">Go to doctors</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Appointments</h5>
+          <p class="card-text">View and manage appointment records</p>
+          <a href="{{ appointments_url }}" class="btn btn-primary">Go to appointments</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-end mt-2">
+    <div class="col-md-8">
+      <hr>
+      <p class="text-center">Created by Anas Mourad</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

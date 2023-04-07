@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <a href="{% url 'index' %}" class="btn btn-primary mt-4">Index</a>
+    <a href="{% url 'patients' %}" class="btn btn-primary mt-4">Patients</a>
+    <div class="row">
+      <div class="col-md-8 mx-auto d-flex justify-content-center">
+        <div>
+        <h2 class="text-center border-bottom pb-3">{% if patient.id %}Edit{% else %}Add{% endif %} a patient</h2>
+          <form method="post" class="pt-3">
+            {% csrf_token %}
+              {{ form.as_p }}
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary">{% if patient.id %}Update{% else %}Add{% endif %} the patient</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
